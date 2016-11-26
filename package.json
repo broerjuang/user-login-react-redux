@@ -1,0 +1,26 @@
+{
+  "name": "cms",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "cd server && npm start",
+    "client": "cd client && npm start",
+    "dev": "echo \"This command has been deprecated. Use 'npm start'\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/broerjuang/user-login-react-redux.git"
+  },
+  "keywords": [],
+  "author": "broerjuang <juangwiantoro@gmail.com> (https://github.com/broerjuang)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/broerjuang/user-login-react-redux/issues"
+  },
+  "homepage": "https://github.com/broerjuang/user-login-react-redux#readme",
+  "devDependencies": {
+    "concurrently": "^3.1.0"
+  }
+}
