@@ -1,7 +1,9 @@
 var express = require('express');
 var path = require('path');
 var bodyParser = require('body-parser');
-var cors = require('cors')
+var cors = require('cors');
+var passport = require('passport');
+var cookieParser = require('cookie-parser');
 
 
 var port = 3001;
@@ -12,7 +14,7 @@ app.use(cors())
 
 // require mongoose
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/todoList');
+mongoose.connect('mongodb://localhost/cms_apps');
 
 // mongoose global promise
 mongoose.Promise = global.Promise;
