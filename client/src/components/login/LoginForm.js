@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 // import { browserHistory } from 'react-router';
 
-class SignupForm extends Component {
+class LoginForm extends Component {
   constructor(props) {
     super(props)
     this.state = {
       username: '',
-      email: '',
-      password: '',
-      passwordConfimation: ''
+      email: ''
     }
 
     this.onChange = this.onChange.bind(this);
@@ -21,26 +19,13 @@ class SignupForm extends Component {
 
   onSubmit(e) {
     e.preventDefault()
-    // Rather than post to axios directly, we could just tell redux to help us
-    // axios
-    //   .post(url, {user : this.state})
-    this.props.userSignupRequest(this.state);
+    this.props.loginRequest(this.state);
   }
 
   render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <h1>Sign Up Now </h1>
-        <div className="form-group">
-          <label className="control-label">Username</label>
-          <input
-            value={this.state.username}
-            onChange={this.onChange}
-            type="text"
-            name="username"
-            className="form-control"
-          />
-        </div>
+        <h1>Login </h1>
         <div className="form-group">
           <label className="control-label">email</label>
           <input
@@ -59,17 +44,6 @@ class SignupForm extends Component {
             onChange={this.onChange}
             type="password"
             name="password"
-            className="form-control"
-          />
-        </div>
-
-        <div className="form-group">
-          <label className="control-label">Password Confimation</label>
-          <input
-            value={this.state.passwordConfimation}
-            onChange={this.onChange}
-            type="password"
-            name="passwordConfimation"
             className="form-control"
           />
         </div>
