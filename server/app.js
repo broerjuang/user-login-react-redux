@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var passport = require('passport');
 var cookieParser = require('cookie-parser');
-
+var LocalStrategy = require('passport-local').Strategy; // Using Capital for class, Strategy is class coy
 
 var port = 3001;
 var users = require('./routes/users');
