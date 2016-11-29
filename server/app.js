@@ -30,7 +30,7 @@ passport.use(new LocalStrategy(modelUser.authenticate()))
 
 // please read more about serialize and deserilize user. For short, it just putting user scheama into separate bite in server
 passport.serializeUser(modelUser.serializeUser());
-passpor.deserializeUser(modelUser.deserializeUser());
+passport.deserializeUser(modelUser.deserializeUser());
 
 
 // require mongoose
