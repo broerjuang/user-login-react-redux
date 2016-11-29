@@ -1,6 +1,6 @@
 import axios from 'axios';
 import Auth from '../token';
-import { Router, browserHistory } from 'react-router';
+import { browserHistory } from 'react-router';
 
 
 const url = 'http://localhost:3001/api'
@@ -12,7 +12,15 @@ export function userSignupRequest(userData) {
      .then(response => {
       console.log(response)
        Auth.authenticateUser(response)
+       browserHistory.push('/')
      })
      .catch(err => console.log(err))
+  }
+}
+
+
+export function isLoggedIn() {
+  if(!Auth.getToken()){
+    browserHistory.push('/login')
   }
 }

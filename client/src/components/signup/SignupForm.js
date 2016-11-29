@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { browserHistory } from 'react-router';
 
 class SignupForm extends Component {
   constructor(props) {
@@ -40,7 +41,6 @@ class SignupForm extends Component {
             className="form-control"
           />
         </div>
-
         <div className="form-group">
           <label className="control-label">email</label>
           <input
