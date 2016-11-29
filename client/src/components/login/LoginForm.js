@@ -6,7 +6,7 @@ class LoginForm extends Component {
     super(props)
     this.state = {
       username: '',
-      email: ''
+      password: ''
     }
 
     this.onChange = this.onChange.bind(this);
@@ -27,12 +27,12 @@ class LoginForm extends Component {
       <form onSubmit={this.onSubmit}>
         <h1>Login </h1>
         <div className="form-group">
-          <label className="control-label">email</label>
+          <label className="control-label">username</label>
           <input
-            value={this.state.email}
+            value={this.state.username}
             onChange={this.onChange}
-            type="email"
-            name="email"
+            type="text"
+            name="username"
             className="form-control"
           />
         </div>
@@ -50,7 +50,7 @@ class LoginForm extends Component {
 
         <div className="form-group">
           <button className="btn btn-primary btn-md">
-            Sign up
+            Login
           </button>
         </div>
       </form>
@@ -58,8 +58,8 @@ class LoginForm extends Component {
   }
 }
 
-SignupForm.propTypes = {
-  userSignupRequest: React.PropTypes.func.isRequired
+LoginForm.propTypes = {
+  loginRequest: React.PropTypes.func.isRequired
 }
 
-export default SignupForm;
+export default LoginForm;

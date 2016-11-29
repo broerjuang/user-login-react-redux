@@ -1,7 +1,7 @@
 import React from 'react';
-import SignupForm from './SignupForm';
+import LoginForm from './LoginForm';
 import { connect } from 'react-redux';
-import { loginRequest } from '../../actions/loginRequest';
+import { loginRequest } from '../../actions/loginActions';
 
 class LoginPage extends React.Component {
   render() {
@@ -16,7 +16,7 @@ class LoginPage extends React.Component {
   }
 }
 
-LoginRequest.propTypes = {
+LoginPage.propTypes = {
   loginRequest: React.PropTypes.func.isRequired
 }
 

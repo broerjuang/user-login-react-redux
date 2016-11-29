@@ -1,7 +1,7 @@
 import React from 'react';
 import { isLoggedIn } from '../actions/signupActions';
 
-class LoginUser extends React.Component {
+class Dashboard extends React.Component {
   render() {
     isLoggedIn()
     return (
@@ -12,4 +12,4 @@ class LoginUser extends React.Component {
   }
 }
 
-export default LoginUser;
+export default Dashboard;
